@@ -86,6 +86,11 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_tables.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_widgets.cpp" />
     <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui.cpp" />
     <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_demo.cpp" />
     <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_draw.cpp" />
@@ -94,6 +99,12 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imconfig.h" />
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui.h" />
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_internal.h" />
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_rectpack.h" />
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_textedit.h" />
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_truetype.h" />
     <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imconfig.h" />
     <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui.h" />
     <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_internal.h" />
@@ -122,6 +133,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <None Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\.gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\LICENSE.txt" />
     <Text Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

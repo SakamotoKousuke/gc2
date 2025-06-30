@@ -16,6 +16,9 @@
     <Filter Include="ingui">
       <UniqueIdentifier>{600c3e6c-5c58-4a7f-aba8-3c6c3353f603}</UniqueIdentifier>
     </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{cb405f0e-dea7-478b-9b57-861b5018c5b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,6 +38,21 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_widgets.cpp">
       <Filter>ingui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +77,24 @@
     <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imstb_truetype.h">
       <Filter>ingui</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Object3d.VS.hlsl" />
@@ -78,6 +114,9 @@
   <ItemGroup>
     <Text Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\LICENSE.txt">
       <Filter>ingui</Filter>
+    </Text>
+    <Text Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\LICENSE.txt">
+      <Filter>imgui</Filter>
     </Text>
   </ItemGroup>
 </Project>
