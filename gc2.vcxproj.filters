@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ingui">
-      <UniqueIdentifier>{600c3e6c-5c58-4a7f-aba8-3c6c3353f603}</UniqueIdentifier>
-    </Filter>
     <Filter Include="imgui">
       <UniqueIdentifier>{cb405f0e-dea7-478b-9b57-861b5018c5b9}</UniqueIdentifier>
     </Filter>
@@ -23,21 +20,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui.cpp">
-      <Filter>ingui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_demo.cpp">
-      <Filter>ingui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_draw.cpp">
-      <Filter>ingui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_tables.cpp">
-      <Filter>ingui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_widgets.cpp">
-      <Filter>ingui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui.cpp">
       <Filter>imgui</Filter>
@@ -54,28 +36,16 @@
     <ClCompile Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
+    <ClCompile Include="externals\imgui\imgui_impl_dx12.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="externals\imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imconfig.h">
-      <Filter>ingui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui.h">
-      <Filter>ingui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imgui_internal.h">
-      <Filter>ingui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imstb_rectpack.h">
-      <Filter>ingui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imstb_textedit.h">
-      <Filter>ingui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\imstb_truetype.h">
-      <Filter>ingui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imconfig.h">
       <Filter>imgui</Filter>
@@ -95,28 +65,23 @@
     <ClInclude Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\imstb_truetype.h">
       <Filter>imgui</Filter>
     </ClInclude>
+    <ClInclude Include="externals\imgui\imgui_impl_dx12.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="externals\imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Object3d.VS.hlsl" />
     <FxCompile Include="Object3d.PS.hlsl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\.editorconfig">
-      <Filter>ingui</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\.gitattributes">
-      <Filter>ingui</Filter>
-    </None>
-    <None Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\.gitignore">
-      <Filter>ingui</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\Downloads\imgui-1.89.4\imgui-1.89.4\LICENSE.txt">
-      <Filter>ingui</Filter>
-    </Text>
     <Text Include="..\..\..\..\Downloads\imgui-1.89.4 (1)\imgui-1.89.4\LICENSE.txt">
       <Filter>imgui</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Object3d.hlsli" />
   </ItemGroup>
 </Project>
