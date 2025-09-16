@@ -1257,8 +1257,31 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	Transform transformSprite{ {1.0f, 1.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, {0.0f,0.0f,0.0f} };
 
+	ID3D12Resource* indexResourceSprite=CreateBufferResource(device, sizeof(uint32_t) * 6);
+
+	D3D12_INDEX_BUFFER_VIEW indexBufferViewSprite{};
+	// リソースの先頭のアドレスから使う
+	indexBufferViewSprite.BufferLocation = indexResourceSprite->GetGPUVirtualAddress();
+	// 使用するリソースのサイズはインデックス6つ分のサイズ
+	indexBufferViewSprite.SizeInBytes = sizeof(uint32_t) * 6;
+	// インデックスはuint32_tとする
+	indexBufferViewSprite.Format = DXGI_FORMAT_R32_UINT;
+
+	// インデックスリソースにデータを書き込む
+	uint32_t* indexDataSprite = nullptr;
+	indexResourceSprite->Map(0, nullptr, reinterpret_cast<void**>(&indexDataSprite));
+	indexDataSprite[0] = 0;
+	indexDataSprite[1] = 1;
+	indexDataSprite[2] = 2;
+	indexDataSprite[3] = 1;
+	indexDataSprite[4] = 3;
+	indexDataSprite[5] = 2;
+
+
 	//mainループ
 	MSG msg{};
+
+
 
 	while (msg.message != WM_QUIT) {
 
@@ -1373,8 +1396,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			commandList->SetGraphicsRootConstantBufferView(1, wvpResource->GetGPUVirtualAddress());
 
 			commandList->SetGraphicsRootDescriptorTable(2, textureSrvHandleGPU);
+
+			//
+			commandList->IASetIndexBuffer(&indexBufferViewSprite); // IBVを設定
+
+
 			//描画!(DrawCall/ドローコール)。3頂点で1つのインスタンス。インスタンスについては今後 
-			commandList->DrawInstanced(6, 1, 0, 0);
+		/*	commandList->DrawInstanced(6, 1, 0, 0);*/
+			//描画! (DrawCall/ドローコール) 6個のインデックスを使用し1つのインスタンスを描画。その他は当面で良い
+			commandList->DrawIndexedInstanced(6, 1, 0, 0, 0);
 
 			// Spriteの描画。変更が必要なものだけ変更する
 			commandList->IASetVertexBuffers(0, 1, &vertexBufferViewSprite);
@@ -1440,6 +1470,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	ImGui_ImplDX12_Shutdown();
 	ImGui_ImplWin32_Shutdown();
 	ImGui::DestroyContext();
+
+	indexResourceSprite->Release();
 	
 	transformationMatrixResourceSprite->Release();
 	vertexResourceSprite->Release();
