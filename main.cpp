@@ -1170,6 +1170,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	depthStencilDesc.DepthEnable = true;
 
 	depthStencilDesc.DepthWriteMask = D3D12_DEPTH_WRITE_MASK_ALL;
+	/*depthStencilDesc.DepthWriteMask = D3D12_WRITE_MASK_ZERO;*/
 
 	depthStencilDesc.DepthFunc = D3D12_COMPARISON_FUNC_LESS_EQUAL;
 	// DepthStencilの設定
@@ -1244,7 +1245,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	//vertexData[5].position = { 0.5f, -0.5f, -0.5f, 1.0f };
 	//vertexData[5].texcoord = { 1.0f,1.0f };
 	// モデル読み込み
-	ModelData modelData= LoadObjFile("resources", "plane.obj");
+	ModelData modelData= LoadObjFile("resources", "fence.obj");
 	// 頂点リソースを作る
 	ID3D12Resource* vertexResource =CreateBufferResource(device, sizeof(VertexData)* modelData.vertices.size());
 	// 頂点バッファビューを作成する
