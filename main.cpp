@@ -1259,12 +1259,16 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	//vertexData[5].texcoord = { 1.0f,1.0f };
 	// モデル読み込み
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/*ModelData modelData= LoadObjFile("resources", "fence.obj");*/
 
 	// モデル読み込み
 	ModelData modelData = LoadObjFile("resources", "plane.obj");
 
 
+=======
+	ModelData modelData = LoadObjFile("resources", "plane.obj");
+>>>>>>> e60c6e7027cd4fcc13c042853e4d5445280f70d6
 =======
 	ModelData modelData = LoadObjFile("resources", "plane.obj");
 >>>>>>> e60c6e7027cd4fcc13c042853e4d5445280f70d6
@@ -1574,7 +1578,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			//描画! (DrawCall/ドローコール)
 			commandList->DrawInstanced(6, 1, 0, 0);
 
-			//
+			//aa
 			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), commandList);
 
 			// 今回はRenderTargetからPresentにする 
