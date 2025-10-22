@@ -1260,12 +1260,16 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// モデル読み込み
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/*ModelData modelData= LoadObjFile("resources", "fence.obj");*/
 
 	// モデル読み込み
 	ModelData modelData = LoadObjFile("resources", "plane.obj");
 
 
+=======
+	ModelData modelData = LoadObjFile("resources", "plane.obj");
+>>>>>>> e60c6e7027cd4fcc13c042853e4d5445280f70d6
 =======
 	ModelData modelData = LoadObjFile("resources", "plane.obj");
 >>>>>>> e60c6e7027cd4fcc13c042853e4d5445280f70d6
@@ -1568,6 +1572,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			//描画! (DrawCall/ドローコール) 6個のインデックスを使用し1つのインスタンスを描画。その他は当面で良い
 			/*commandList->DrawIndexedInstanced(6, 1, 0, 0, 0);*/
 			commandList->DrawInstanced(UINT(modelData.vertices.size()), 10, 0, 0);
+
+
+
 
 
 			// Spriteの描画。変更が必要なものだけ変更する
