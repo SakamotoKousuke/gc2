@@ -1245,7 +1245,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	//vertexData[5].position = { 0.5f, -0.5f, -0.5f, 1.0f };
 	//vertexData[5].texcoord = { 1.0f,1.0f };
 	// モデル読み込み
-	ModelData modelData= LoadObjFile("resources", "fence.obj");
+	ModelData modelData= LoadObjFile("resources", "plane.obj");
 	// 頂点リソースを作る
 	ID3D12Resource* vertexResource =CreateBufferResource(device, sizeof(VertexData)* modelData.vertices.size());
 	// 頂点バッファビューを作成する
