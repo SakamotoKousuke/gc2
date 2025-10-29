@@ -99,6 +99,8 @@ MaterialData LoadMaterialTemplateFile(const std::string& directoryPath, const st
 
 }
 
+//hanntenn
+
 ModelData LoadObjFile(const std::string& directoryPath, const std::string& filename)
 {
 	// 1. 中で必要となる変数の宣言
