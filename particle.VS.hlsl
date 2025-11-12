@@ -22,7 +22,7 @@ struct TransformationMatrix
     float32_t4x4 WVP;
 };
 //ConstantBuffer<TransformationMatrix> gTransformationMatrix : register(b0);
-StructuredBuffer<TransformationMatrix> gTransformationMatrices register(to);
+StructuredBuffer<TransformationMatrix> gTransformationMatrices:register(t0);
 
 
 //struct VertexShaderOutput
