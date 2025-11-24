@@ -39,12 +39,12 @@ struct VertexShaderInput
 };
 //VertexShaderOutput main(VertexShaderInput input)
 
-VertexShaderOutput main(VertexShader InputVertexShaderInput, uint32_t instanceId : SV_InstanceID)
+VertexShaderOutput main(VertexShaderInput input, uint32_t instanceId : SV_InstanceID)
 {
     VertexShaderOutput output;
 //output.position=input.position;
     //output.position = mul(input.position, gTransformationMatrix.WVP);
-    output.position = mul(Input.position, gTransformationMatrices[instanceId].WVP);
+    output.position = mul(input.position, gTransformationMatrices[instanceId].WVP);
     
     output.texcoord = input.texcoord;
     return output;
