@@ -15,7 +15,7 @@
 #pragma comment(lib,"dxcompiler.lib")
 #include <fstream>
 #include <sstream>
-#include "externals/DirectTex/d3dx12.h"
+#include "externals/DirectXTex/d3dx12.h"
 
 #include "externals/imgui/imgui.h"
 #include "externals/imgui/imgui_impl_dx12.h"
@@ -1345,7 +1345,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		srvDescriptorHeap,
 		srvDescriptorHeap->GetCPUDescriptorHandleForHeapStart(),
 		srvDescriptorHeap->GetGPUDescriptorHandleForHeapStart());
-
+	//
 	// Textureを読んで転送する
 	DirectX::ScratchImage mipImages = LoadTexture(modelData.material.textureFilePath);
 	const DirectX::TexMetadata& metadata = mipImages.GetMetadata();
